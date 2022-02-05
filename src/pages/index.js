@@ -1,19 +1,25 @@
 import * as React from "react"
 import 'semantic-ui-css/semantic.min.css'
-import Navbar from '../components/Navigation'
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
+import '../style/styles.scss'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./layout";
+import Home from "./home";
+import AboutUs from './about';
 
 // markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
+    <main>
       <title>El Entramado Social</title>
-      <Navbar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<AboutUs />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+
     </main>
   )
 }
