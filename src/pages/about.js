@@ -1,9 +1,10 @@
 import React from 'react';
 
-const AboutUs = () => {
+const AboutUs = (props) => {
     return (
         <div>
             <p>Quienes somos?</p>
+            <p>gelkasdmfoknasdof</p>
         </div>
     );
 };

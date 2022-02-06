@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 
 function Home(props) {
     return (
         <div>
-            <p>Inicio</p>
+            <h1>Inicio</h1>
         </div>
     );
 }

@@ -4,7 +4,8 @@ import '../style/styles.scss'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layout";
 import Home from "./home";
-import AboutUs from './about';
+import { AboutUs } from "./about";
+
 
 // markup
 const IndexPage = () => {
@@ -15,7 +16,7 @@ const IndexPage = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="about" element={<AboutUs />} />
+            <Route path="/about" element={<AboutUs />} />
           </Route>
         </Routes>
       </BrowserRouter>
