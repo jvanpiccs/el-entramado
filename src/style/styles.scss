@@ -7,6 +7,10 @@ $font-stack: 'Nunito';
 //colors
 $primary-color: #444444;
 $green-color: #9fd356;
+$green-light-color: lighten(
+  $color: $green-color,
+  $amount: 30,
+);
 $green-dark-color: #008f56;
 $orange-color: #fa824c;
 $white-color: #ffffff;
@@ -19,20 +23,17 @@ body {
   color: $primary-color;
   background-color: $white-light-color;
   .Nav {
-    background-color: $green-color;
-    color: $white-color;
-    height: 50px;
-    display: flex;
+    $color: $green-color;
+    background-color: $green-color !important;
     align-items: center;
-    a {
-      padding: 10px;
-      color: $white-color;
+    div.header {
+      font-weight: 600;
+      margin-right: 2em;
+    }
+    div a {
+      color: $white-color !important;
       &:hover {
-        animation: 0.5 all;
-        font-weight: 600;
-      }
-      &:focus-visible {
-        text-decoration: none;
+        color: $green-light-color !important;
       }
     }
   }
